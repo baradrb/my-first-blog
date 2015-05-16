@@ -9,12 +9,22 @@
         	<p>You are invited to follow me on <a href="http://twitter.com/BaraDrb">Twitter</a>.</p>
         </div>
 
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+
+
         <div>
         	This page was created during <a href="http://tutorial.djangogirls.org/en/index.html">Django girls</a> workshop in Prague, May 16 2015.
         	Thanks to <a href="http://node5.cz/"><strong>Node5</strong></a> for hosting us in their modern, cozy, well-catered space.
         </div>
 
-        <div><p>For successful coding you need:</p>
+        <div>
+        	<p>For successful coding you need:</p>
         	<p><ul><li>coffee</li><li>donuts</li><li>fast wifi :)</li></ul></p>
         	<p>If you would like to get some feedback for this workshop or tell me anything else, please contact me at <a href="mailto:dariathedaria@gmail.com">my email address</a>.</p>
         </div>
